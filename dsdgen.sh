@@ -13,7 +13,7 @@ for dat in $FILES; do
   mv $DATDIR/$SCALE/$dat.dat $DATDIR/$SCALE/$dat/$dat.csv
 done 
 
-HDFSDIR=s3a://goes-se-sandbox01/tpcds/$SCALE/
-hdfs dfs -mkdir $HDFSDIR
+HDFSDIR=s3a://goes-se-sandbox01/tpcds
+hdfs dfs -mkdir $HDFSDIR/$SCALE
 
 hdfs dfs -copyFromLocal $DATDIR/$SCALE $HDFSDIR
