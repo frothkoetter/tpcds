@@ -3,7 +3,7 @@ SCALE=10
 mkdir $DATDIR
 mkdir $DATDIR/$SCALE
 
-# java -jar tpcds-1.3-SNAPSHOT-jar-with-dependencies.jar --scale 10 --directory /home/cdsw/tpcds/10
+# java -jar tpcds-1.3-SNAPSHOT-jar-with-dependencies.jar --scale $SCALE --directory $DATDIR/$SCALE
 
 FILES="call_center catalog_page catalog_returns catalog_sales customer_address customer customer_demographics
 date_dim dbgen_version household_demographics income_band inventory item promotion reason ship_mode store store_returns
