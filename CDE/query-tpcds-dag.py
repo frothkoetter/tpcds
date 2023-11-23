@@ -24,7 +24,8 @@ dag = DAG(
 
 tpcds_query = """
 -- use TPCDS
-use tpcds_ice_ws;
+use tpcds_ice_ws; 
+select current_database();
 
 -- start query 1 in stream 0 using template query1.tpl and seed 2031708268
 with customer_total_return as
