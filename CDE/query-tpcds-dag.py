@@ -19,7 +19,7 @@ default_args = {
 }
 
 dag = DAG(
-    'tpcds-dag', default_args=default_args, catchup=False,schedule='5 * * * *',is_paused_upon_creation=True)
+    'tpcds_query', default_args=default_args, catchup=False,schedule_interval="15 * * * *",is_paused_upon_creation=True)
 
 
 tpcds_query = """
